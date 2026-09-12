@@ -89,7 +89,6 @@ The lab uses the `10.0.0.0/24` network. The following IP addresses represent exa
 
 7-Zip was installed to extract and manage downloaded virtual machine files. Oracle VirtualBox was installed as the virtualization platform. The Kali Linux VM (`kali-linux-2026.2-virtualbox-amd64`) was imported with 2048 MB RAM and 2 Processors allocated.
 
-![VirtualBox Setup](screenshots/virtualbox-setup.png)
 
 ---
 
