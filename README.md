@@ -51,7 +51,7 @@ The setup follows a two-phase approach covering the installation and configurati
 
 The general lab architecture is structured as follows:
 
-```text
+<pre>
                  Host Machine
                      |
                VirtualBox
@@ -66,6 +66,8 @@ The general lab architecture is structured as follows:
        |             |             |
        +-------------+-------------+
               Connectivity Tests
+</pre>
+
 ### Example IP Configuration
 
 The lab uses the `10.0.0.0/24` network. The following IP addresses represent example configurations for the virtual machines in the lab:
@@ -81,7 +83,7 @@ The lab uses the `10.0.0.0/24` network. The following IP addresses represent exa
 
 ---
 
-# 🌸 Phase 1 – Kali Linux Setup & Proof of Work
+#  🌸 Phase 1 – Kali Linux Setup & Proof of Work
 
 ## Step 1: Install 7-Zip & Setup VirtualBox
 
@@ -140,6 +142,81 @@ A snapshot of the configured Kali Linux VM was created to provide a restore poin
 
 During the setup, if Internet connectivity issues occur with Kali Linux 2026.1 or later due to Duplicate Address Detection (DAD) timeouts, the following command can be used:
 
-```bash
-sudo nmcli connection modify "eth0" ipv4.dad-timeout 0
+`sudo nmcli connection modify "eth0" ipv4.dad-timeout 0`
 
+The setup also utilizes `10.0.0.1` as the gateway address if Internet connectivity requires static routing.
+
+---
+
+# Virtual Machine Snapshots
+
+Snapshots were created after configuring the virtual machines. Snapshots are useful in a cybersecurity lab because they allow the environment to be restored to a known working state after performing potentially disruptive experiments.
+
+### Recommended Snapshot Points
+
+- Fresh OS installation
+- Network configuration completed
+- Kali Linux configured
+- Target machine configured
+- Pre-exploitation state
+
+---
+
+# Connectivity Testing
+
+Connectivity between the virtual machines can be verified using ICMP echo requests:
+
+`ping 10.0.0.X`
+
+The `10.0.0.X` address should be replaced with the actual IP address of the virtual machine being tested.
+
+---
+
+# Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- VirtualBox and virtual machine deployment
+- Kali Linux and Windows virtual machine configuration
+- NAT Network configuration and IPv4 addressing
+- Basic network troubleshooting and interface commands (`ip a`, `nmcli`, `ping`)
+- VM snapshots and state persistence
+- Virtualized cybersecurity lab environment preparation
+- Ethical hacking environment setup
+
+---
+
+# Future Labs
+
+This environment can be extended for practical cybersecurity exercises such as:
+
+- Network reconnaissance
+- Vulnerability assessment
+- Web application security testing
+- Network security testing
+- Exploitation in controlled environments
+- Digital forensics exercises
+- Capture The Flag (CTF) challenges
+- Security monitoring and analysis
+
+Additional offline virtual machines may be added for future CTF practical labs and challenges.
+
+---
+
+# Disclaimer
+
+This repository is intended for educational and authorized cybersecurity testing only. All security testing should be performed only against systems and networks that you own or have explicit permission to test.
+
+---
+
+# Author
+
+**Tajalla Fatima**
+
+Cybersecurity Enthusiast | Interested in Cybersecurity, Ethical Hacking, Networking
+
+---
+
+# References
+
+Lab setup based on the provided Practical Lab Environment Setup for Pentesting, Ethical Hacking & Cybersecurity guide by NetworkWalks Academy.
