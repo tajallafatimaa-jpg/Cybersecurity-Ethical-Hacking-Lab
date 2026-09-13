@@ -96,7 +96,7 @@ The lab uses the `10.0.0.0/24` network. The following IP addresses represent exa
 
 A custom NAT Network named `NatNetwork` was created in VirtualBox using the `10.0.0.0/24` IPv4 CIDR prefix with DHCP enabled.
 
-![NAT Network Configuration](screenshots/nat-network.png)
+![NAT Network Configuration](nat-network.png)
 
 ---
 
@@ -109,7 +109,7 @@ Kali Linux was configured manually to communicate through the custom NAT Network
 - **Gateway:** `10.0.0.1`
 - **DNS Server:** `8.8.8.8`
 
-![Kali Linux Network Configuration](screenshots/kali-network.png)
+![Kali Linux Network Configuration](kali-network.png)
 
 ---
 
@@ -117,7 +117,7 @@ Kali Linux was configured manually to communicate through the custom NAT Network
 
 Assigned IPv4 configurations were verified inside the Kali Linux terminal using `ip a`. The `eth0` network adapter successfully bound to `10.0.0.2/24`.
 
-![IP Interface Verification](screenshots/ip-interface-verification.png)
+![IP Interface Verification](ip-interface-verification.png)
 
 ---
 
@@ -125,7 +125,7 @@ Assigned IPv4 configurations were verified inside the Kali Linux terminal using 
 
 Tested internet reachability and NAT gateway routing inside Kali Linux by accessing external web destinations via the browser.
 
-![Connectivity and Network Routing Test](screenshots/connectivity-network-test.png)
+![Connectivity and Network Routing Test](connectivity-network-test.png)
 
 ---
 
@@ -133,7 +133,7 @@ Tested internet reachability and NAT gateway routing inside Kali Linux by access
 
 A snapshot of the configured Kali Linux VM was created to provide a restore point before performing security experiments. The snapshot was named `Kali setup` with the description `Setting up IP address`.
 
-![Kali Linux VM Snapshot](screenshots/kali-vm-snapshot.png)
+![Kali Linux VM Snapshot](kali-vm-snapshot.png)
 
 ---
 
